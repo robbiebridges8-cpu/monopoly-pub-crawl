@@ -337,7 +337,7 @@ const pubs = [
   },
   {
     id: 17,
-    property: "The Strand",
+    property: "Strand",
     pubName: "The Wellington",
     address: "351 Strand",
     postcode: "WC2R 0HS",

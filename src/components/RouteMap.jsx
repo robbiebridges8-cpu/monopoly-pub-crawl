@@ -147,7 +147,7 @@ export default function RouteMap({ onPubSelect, selectedPub }) {
       <div className="container">
         <h2 className="section-title animate-on-scroll">The Route</h2>
         <p className="section-subtitle animate-on-scroll">
-          Note: The route doesn't follow the board order — that would be impossible! Instead, it's optimised to minimise travel time while hitting all 26 properties.
+          Note: Due to geographical constraints, the route can't follow the board order exactly. Instead, it's optimised to minimise travel time while hitting all 26 properties.
         </p>
 
         <div className="map-wrapper animate-on-scroll">

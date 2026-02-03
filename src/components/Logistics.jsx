@@ -69,7 +69,7 @@ export default function Logistics({ onPubSelect }) {
               <div className="logistics-tip-icon">&#x1F354;</div>
               <div className="logistics-tip-content">
                 <h4>Eat Along the Way</h4>
-                <p>Eating on the crawl is for survival, not luxury. We usually stick to meal deals and fast food to reduce cost and waiting times.</p>
+                <p>Eating on the crawl is for survival, not luxury. Stick to meal deals and fast food to reduce cost and waiting times.</p>
               </div>
             </div>
             <div className="logistics-tip">
