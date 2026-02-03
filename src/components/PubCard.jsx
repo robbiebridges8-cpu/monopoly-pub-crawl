@@ -35,7 +35,7 @@ export default function PubCard({ pub, onClick }) {
           <div className="property-card__row">
             <span>To next pub</span>
             <span className="property-card__dots" />
-            <span>{pub.transportToNext}{pub.transportTime ? ` ${pub.transportTime}m` : ''}</span>
+            <span>{pub.transportToNext}{pub.transportTime ? ` ${pub.transportTime} mins` : ''}</span>
           </div>
         </div>
       </div>

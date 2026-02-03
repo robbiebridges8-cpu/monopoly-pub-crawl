@@ -47,8 +47,7 @@ export default function Overview() {
           <div className="overview-text">
             <h2 className="overview-heading">Overview</h2>
             <p className="overview-body">
-              The Monopoly pub crawl is guaranteed to provide a full day of fun across London. This page should provide you with all you need to make sure you nail the logistics - all you need to worry about is the drinking.
-            
+              The Monopoly pub crawl is guaranteed to provide a full day of fun across London. The crawl covers all 22 properties and 4 stations on the board — no utilities, sorry! This page should provide you with all you need to make sure you nail the logistics. All you need to worry about is the drinking.
             </p>
             <p className="overview-body">
               To add to the fun (and help us remember the final stages of the crawl), we bring a set of property cards with us and take a picture at each venue with its card. Take a look at some of our highlights!

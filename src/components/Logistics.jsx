@@ -128,13 +128,6 @@ export default function Logistics({ onPubSelect }) {
                         <h4 className="timeline-review-title">The Verdict</h4>
                         <p className="timeline-review-text">{pub.review}</p>
                         <div className="timeline-review-meta">
-                          {pub.rating !== null && (
-                            <span className="timeline-review-rating" style={{
-                              color: pub.rating >= 8 ? '#2E7D32' : pub.rating >= 6 ? '#FF6B00' : '#D32F2F'
-                            }}>
-                              {pub.rating}/10
-                            </span>
-                          )}
                           {pub.pintQuantity === '0' && (
                             <span className="timeline-review-skipped">SKIPPED</span>
                           )}
@@ -147,6 +140,14 @@ export default function Logistics({ onPubSelect }) {
                             </a>
                           )}
                         </div>
+                        {pub.alternatives && pub.alternatives.length > 0 && (
+                          <div className="timeline-review-alternatives">
+                            <span className="timeline-review-alternatives-label">Nearby alternatives:</span>
+                            {pub.alternatives.map((alt, i) => (
+                              <span key={i} className="timeline-review-alt">{alt}</span>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

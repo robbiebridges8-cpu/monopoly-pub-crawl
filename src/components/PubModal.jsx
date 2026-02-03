@@ -54,14 +54,7 @@ export default function PubModal({ pub, onClose }) {
               <span>Transport to next</span>
               <span className="modal-deed-row-dots" />
               <span className="modal-deed-row-value">
-                {pub.transportToNext}{pub.transportTime ? ` \u00B7 ${pub.transportTime} min` : ''}
-              </span>
-            </div>
-            <div className="modal-deed-row modal-deed-row--bold">
-              <span>Our Rating</span>
-              <span className="modal-deed-row-dots" />
-              <span className="modal-deed-row-value" style={{ color: pub.rating >= 8 ? '#2E7D32' : pub.rating >= 6 ? '#FF6B00' : '#D32F2F' }}>
-                {pub.rating !== null ? `${pub.rating}/10` : 'N/A'}
+                {pub.transportToNext}{pub.transportTime ? ` \u00B7 ${pub.transportTime} mins` : ''}
               </span>
             </div>
           </div>

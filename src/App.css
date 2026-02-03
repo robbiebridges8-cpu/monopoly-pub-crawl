@@ -1586,6 +1586,30 @@
   text-decoration: underline;
 }
 
+.timeline-review-alternatives {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-review-alternatives-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.timeline-review-alt {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  background: #f5f5f5;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
 .timeline-card-transport {
   text-align: center;
   font-size: 0.8rem;

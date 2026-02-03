@@ -19,7 +19,8 @@ const pubs = [
     pintQuantity: "1/2",
     review: "A proper South London pub to kick things off. It opens at 11am, and we usually try and get in and out quickly to bank some breathing room later down the line. Lord Nelson is a common starting place for crawlers, so try and make friends with other groups if you see them there - you'll be seeing a lot of them throughout the day! Make sure you get a photo underneath the Old Kent Road sign. It's quite a distance to the next pub, and we enjoy taking Lime bikes across Tower Bridge while we can still function, but there are buses if this isn't an option.",
     color: "#8B4513",
-    colorGroup: "brown"
+    colorGroup: "brown",
+    alternatives: ["The Thomas A Becket", "The World Turned Upside Down"]
   },
   {
     id: 2,
@@ -40,6 +41,7 @@ const pubs = [
     color: "#000000",
     colorGroup: "station",
     website: "https://www.theminoriespub.co.uk",
+    alternatives: ["The Counting House", "The Hung Drawn and Quartered"]
   },
   {
     id: 3,
@@ -60,6 +62,7 @@ const pubs = [
     color: "#8B4513",
     colorGroup: "brown",
     website: "https://www.nicholsonspubs.co.uk/restaurants/london/thehoopandgrapesaldgatecityoflondon",
+    alternatives: ["The Still & Star", "Williams Ale and Cider House"]
   },
   {
     id: 4,
@@ -80,6 +83,7 @@ const pubs = [
     color: "#000000",
     colorGroup: "station",
     website: "https://www.jdwetherspoon.com/pubs/all-pubs/england/london/hamilton-hall-london",
+    alternatives: ["The Magpie", "Dirty Dicks"]
   },
   {
     id: 5,
@@ -100,6 +104,7 @@ const pubs = [
     color: "#87CEEB",
     colorGroup: "lightBlue",
     website: "https://www.greeneking-pubs.co.uk/pubs/greater-london/camden-head",
+    alternatives: ["The York", "The Angel"]
   },
   {
     id: 6,
@@ -120,6 +125,7 @@ const pubs = [
     color: "#87CEEB",
     colorGroup: "lightBlue",
     website: "https://www.thecastleislington.co.uk",
+    alternatives: ["The Lexington", "The Chapel Bar"]
   },
   {
     id: 7,
@@ -140,6 +146,7 @@ const pubs = [
     color: "#000000",
     colorGroup: "station",
     website: "https://www.parcelyard.co.uk",
+    alternatives: ["The Queen's Head", "The Betjeman Arms"]
   },
   {
     id: 8,
@@ -160,6 +167,7 @@ const pubs = [
     color: "#87CEEB",
     colorGroup: "lightBlue",
     website: "https://www.eustontap.com",
+    alternatives: ["The Doric Arch", "The Euston Flyer"]
   },
   {
     id: 9,
@@ -180,6 +188,7 @@ const pubs = [
     color: "#000000",
     colorGroup: "station",
     website: "https://www.themarylebone.co.uk",
+    alternatives: ["The Golden Eagle", "The Barley Mow"]
   },
   {
     id: 10,
@@ -200,6 +209,7 @@ const pubs = [
     color: "#00008B",
     colorGroup: "darkBlue",
     website: "https://the-audley.com",
+    alternatives: ["The Punchbowl", "The Running Horse"]
   },
   {
     id: 11,
@@ -220,6 +230,7 @@ const pubs = [
     color: "#00008B",
     colorGroup: "darkBlue",
     website: "https://www.burlingtonarms.com",
+    alternatives: ["The Coach Makers Arms", "The Windmill"]
   },
   {
     id: 12,
@@ -240,6 +251,7 @@ const pubs = [
     color: "#FFD700",
     colorGroup: "yellow",
     website: "https://www.nicholsonspubs.co.uk/restaurants/london/thestjamestavernwestminster",
+    alternatives: ["The Lyric", "De Hems"]
   },
   {
     id: 13,
@@ -260,6 +272,7 @@ const pubs = [
     color: "#FF69B4",
     colorGroup: "pink",
     website: "https://www.redlionwestminster.co.uk",
+    alternatives: ["The Golden Lion", "The ICA Bar"]
   },
   {
     id: 14,
@@ -280,6 +293,7 @@ const pubs = [
     color: "#FF69B4",
     colorGroup: "pink",
     website: "https://www.greeneking.co.uk/pubs/greater-london/silver-cross",
+    alternatives: ["The Clarence", "Lord Moon of the Mall"]
   },
   {
     id: 15,
@@ -299,6 +313,7 @@ const pubs = [
     review: "London's only pub split across both sides of an alley. The Ship & Shovell, named after Admiral Sir Cloudesley Shovell, is two separate bars connected by name but divided by Craven Passage. This is a lively stop, with people congregating all the way up the alley. From here, embark on the last of the bigger walks of the day, taking around 17 minutes to arrive at Fleet Street.",
     colorGroup: "pink",
     website: "https://www.shipandshovell.co.uk",
+    alternatives: ["The Sherlock Holmes", "The Harp"]
   },
   {
     id: 16,
@@ -317,7 +332,8 @@ const pubs = [
     pintQuantity: "1/2",
     review: "Rebuilt in 1667 after the Great Fire, Ye Olde Cheshire Cheese is one of London's most historic pubs. Samuel Johnson, Charles Dickens and Mark Twain all drank here. The warren of dark rooms connected by narrow staircases is enchanting. A crown jewel of the crawl, and arguably the most historically significant - do not skip this one.",
     color: "#FF0000",
-    colorGroup: "red"
+    colorGroup: "red",
+    alternatives: ["The Old Bank of England", "Ye Olde Cock Tavern"]
   },
   {
     id: 17,
@@ -338,6 +354,7 @@ const pubs = [
     color: "#FF0000",
     colorGroup: "red",
     website: "https://www.thewellingtonpub.com",
+    alternatives: ["The George", "The Coal Hole"]
   },
   {
     id: 18,
@@ -358,6 +375,7 @@ const pubs = [
     color: "#FF4500",
     colorGroup: "orange",
     website: "https://www.themarquessofanglesey.co.uk",
+    alternatives: ["The Lamb and Flag", "The Nag's Head"]
   },
   {
     id: 19,
@@ -378,6 +396,7 @@ const pubs = [
     color: "#FF0000",
     colorGroup: "red",
     website: "https://www.admiraltytrafalgar.co.uk",
+    alternatives: ["The Chandos", "The Portrait"]
   },
   {
     id: 20,
@@ -398,6 +417,7 @@ const pubs = [
     color: "#FFD700",
     colorGroup: "yellow",
     website: "https://www.jdwetherspoon.com/pubs/all-pubs/england/london/the-moon-under-water-leicester-square",
+    alternatives: ["The Porcupine", "All Bar One Leicester Square"]
   },
   {
     id: 21,
@@ -416,7 +436,8 @@ const pubs = [
     pintQuantity: "1",
     review: "For some reason, the later in the crawl we get, the more we start opting for full pints instead of halves. This begins around the time of The Coach House, which is a cosy pub tucked just off Coventry Street in the heart of theatreland. The Coach House is a welcome escape from the West End crowds, with comfortable seating and a decent drinks selection. Feels like the beginning of the home stretch - 5 to go.",
     color: "#FFD700",
-    colorGroup: "yellow"
+    colorGroup: "yellow",
+    alternatives: ["The Comedy", "The Piccadilly Institute"]
   },
   {
     id: 22,
@@ -435,7 +456,8 @@ const pubs = [
     pintQuantity: "1/2",
     review: "Named in honour of David Bowie, whose Ziggy Stardust album cover was shot on this very street, The Starman is a stylish modern bar just off Regent Street. Check out the Bowie mural around the corner before heading in.",
     color: "#228B22",
-    colorGroup: "green"
+    colorGroup: "green",
+    alternatives: ["Vasco and Piero's Pavilion", "The Clachan"]
   },
   {
     id: 23,
@@ -454,7 +476,8 @@ const pubs = [
     pintQuantity: "1/2",
     review: "Although Vine Street doesn't exist anymore, Leicester Arms is a traditional pub on Glasshouse Street near where Vine Street once ran. It has a lot of character and a warm, old-school pub atmosphere. Remember to maintain regular water intervals - could be the difference between success and failure at this stage.",
     color: "#FF4500",
-    colorGroup: "orange"
+    colorGroup: "orange",
+    alternatives: ["The Blue Posts", "Rupert Street Bar"]
   },
   {
     id: 24,
@@ -475,6 +498,7 @@ const pubs = [
     color: "#FF4500",
     colorGroup: "orange",
     website: "https://www.greeneking-pubs.co.uk/pubs/greater-london/shakespeares-head",
+    alternatives: ["The Crown", "The John Snow"]
   },
   {
     id: 25,
@@ -493,7 +517,8 @@ const pubs = [
     pintQuantity: "1/2",
     review: "A charming little pub tucked away on a quiet street just off Bond Street. The Duke of York punches above its weight with a cosy, traditional interior. Definitely feels like a hidden gem. This is where the strict timings throughout the day pay dividends. If you've been careless, however, you'll be racing against the clock in order to finish the crawl.",
     color: "#228B22",
-    colorGroup: "green"
+    colorGroup: "green",
+    alternatives: ["The Clarendon", "The Iron Duke"]
   },
   {
     id: 26,
@@ -512,7 +537,8 @@ const pubs = [
     pintQuantity: "1",
     review: "The grand finale. The Duchess is a sleek, modern venue just off Oxford Street - the perfect spot to celebrate the end of the epic Monopoly pub crawl. It closes at midnight, so you should be able to savour your conquest here. It is then up to you whether to celebrate the achievement and continue the night in one of Soho's many bars or clubs - I can say that we certainly haven't had the urge to carry on after completing the board. If you've made it to the end, you are part of the MonopElite - congratulations!",
     color: "#228B22",
-    colorGroup: "green"
+    colorGroup: "green",
+    alternatives: ["The Argyll Arms", "The Champion"]
   }
 ];
 
