@@ -40,12 +40,15 @@ export default function GalleryModal({ images, startIndex = 0, onClose }) {
         &#8249;
       </button>
 
-      <div className="gallery-modal-image-wrapper" onClick={(e) => e.stopPropagation()}>
+      <div className="gallery-modal-content" onClick={(e) => e.stopPropagation()}>
         <img
           className="gallery-modal-image"
           src={image.src}
           alt={image.alt || `Photo ${currentIndex + 1}`}
         />
+        {image.caption && (
+          <p className="gallery-modal-caption">{image.caption}</p>
+        )}
       </div>
 
       <button

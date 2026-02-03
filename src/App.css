@@ -611,19 +611,29 @@
   right: 8px;
 }
 
-.gallery-modal-image-wrapper {
+.gallery-modal-content {
   max-width: 80vw;
-  max-height: 80vh;
+  max-height: 85vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .gallery-modal-image {
   max-width: 80vw;
-  max-height: 80vh;
+  max-height: 75vh;
   object-fit: contain;
   border-radius: 4px;
+}
+
+.gallery-modal-caption {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 16px;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 .gallery-modal-placeholder {
