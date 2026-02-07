@@ -1743,43 +1743,44 @@
 
 /* ===== PRINT STYLESHEET ===== */
 @media print {
-  /* Reset page */
+  /* Black and white print */
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 
   body {
     background: #fff !important;
     color: #000 !important;
-    font-size: 11pt;
-    line-height: 1.4;
+    font-size: 10pt;
+    line-height: 1.3;
   }
 
-  /* Hide non-essential sections */
+  /* Hide everything except pub by pub section */
   .navbar,
-  .hero-section,
+  .hero,
+  .overview-section,
   .map-section,
   .footer,
   .modal-overlay,
+  .gallery-modal-overlay,
   .print-route-btn,
+  .logistics-grid,
   .logistics-tips,
+  .section-title,
+  .section-subtitle {
+    display: none !important;
+  }
+
+  /* Reset animations */
   .animate-on-scroll {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
 
-  .navbar,
-  .hero-section,
-  .map-section,
-  .footer,
-  .modal-overlay,
-  .print-route-btn {
-    display: none !important;
-  }
-
-  /* Show logistics section cleanly */
+  /* Logistics section - only show timeline */
   .logistics-section {
     padding: 0 !important;
   }
@@ -1789,73 +1790,26 @@
     padding: 0 !important;
   }
 
-  /* Print header */
-  .section-title {
-  
-    font-size: 24pt;
-    text-align: center;
-    margin-bottom: 8pt;
-    page-break-after: avoid;
-  }
-
-  .section-subtitle {
-    text-align: center;
-    font-size: 11pt;
-    margin-bottom: 16pt;
-    color: #333 !important;
-  }
-
-  /* Stats cards — compact row */
-  .logistics-grid {
-    display: flex !important;
-    gap: 12pt;
-    margin-bottom: 16pt;
-    justify-content: center;
-  }
-
-  .logistics-card {
-    background: #fff !important;
-    border: 1px solid #000 !important;
-    box-shadow: none !important;
-    padding: 8pt 12pt !important;
-    border-radius: 4pt;
-    flex: 0 1 auto;
-  }
-
-  .logistics-card-icon {
-    display: none !important;
-  }
-
-  .logistics-card-title {
-    font-size: 11pt;
-    margin: 0 0 4pt;
-  }
-
-  .logistics-card-text {
-    font-size: 9pt;
-    color: #333;
-    margin: 0;
-  }
-
-  /* Survival tips — hide for print */
-  .logistics-tips {
-    display: none !important;
-  }
-
   /* Timeline heading */
   .timeline-header {
     justify-content: center;
-    margin: 16pt 0 12pt;
+    margin: 0 0 10pt;
     page-break-after: avoid;
   }
 
   .timeline-heading {
-    font-size: 18pt;
+    font-size: 16pt;
+    color: #000 !important;
   }
 
-  /* Timeline cards — full width, no connector line */
+  /* Timeline cards */
   .timeline-cards {
     max-width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  .timeline-cards::before {
+    display: none !important;
   }
 
   .timeline-card-connector {
@@ -1864,112 +1818,119 @@
 
   .timeline-card-item {
     padding-left: 0 !important;
-    margin-bottom: 8pt !important;
+    margin-bottom: 6pt !important;
     page-break-inside: avoid;
-  }
-
-  .timeline-card-item::before {
-    display: none !important;
   }
 
   /* Card + review side by side */
   .timeline-card-layout {
     display: flex !important;
     flex-direction: row !important;
-    gap: 12pt;
+    gap: 8pt;
     align-items: flex-start;
   }
 
   .timeline-card-deed {
-    flex: 0 0 57mm;
+    flex: 0 0 50mm;
   }
 
   .timeline-card-review {
     flex: 1;
   }
 
-  /* Property cards — exact physical Monopoly deed size (portrait) */
+  /* Property cards — black and white */
   .property-card {
-    width: 57mm !important;
-    height: 89mm !important;
-    aspect-ratio: 57 / 89 !important;
+    width: 50mm !important;
+    height: auto !important;
+    min-height: 70mm !important;
     transform: none !important;
-    margin-right: 0 !important;
-    margin-bottom: 0 !important;
-    border: 1.5pt solid #000 !important;
-    border-radius: 2mm !important;
+    margin: 0 !important;
+    border: 1pt solid #000 !important;
+    border-radius: 1mm !important;
     box-shadow: none !important;
-    cursor: default !important;
     page-break-inside: avoid;
   }
 
   .property-card__band {
-    padding: 2mm 2.5mm !important;
+    padding: 1.5mm 2mm !important;
+    background: #000 !important;
+    border-bottom: 1pt solid #000 !important;
   }
 
   .property-card__band-label {
-    font-size: 8pt !important;
+    font-size: 7pt !important;
+    color: #fff !important;
   }
 
   .property-card__body {
-    padding: 2mm 2.5mm !important;
+    padding: 1.5mm 2mm !important;
   }
 
   .property-card__pub-name {
-    font-size: 10pt !important;
+    font-size: 9pt !important;
+    color: #000 !important;
   }
 
   .property-card__address {
-    font-size: 6.5pt !important;
+    font-size: 6pt !important;
+    color: #333 !important;
+  }
+
+  .property-card__rule {
+    background: #000 !important;
   }
 
   .property-card__row {
-    font-size: 6.5pt !important;
+    font-size: 6pt !important;
+    color: #000 !important;
   }
 
-  /* Review boxes */
+  /* Review boxes — black and white */
   .timeline-review-box {
     background: #fff !important;
-    border: 1pt solid #ccc !important;
+    border: 1pt solid #000 !important;
     box-shadow: none !important;
-    padding: 6pt 8pt !important;
+    padding: 4pt 6pt !important;
   }
 
   .timeline-review-title {
-    font-size: 10pt !important;
-    margin-bottom: 4pt !important;
+    font-size: 8pt !important;
+    margin-bottom: 3pt !important;
+    color: #000 !important;
   }
 
   .timeline-review-text {
-    font-size: 9pt !important;
-    line-height: 1.3 !important;
+    font-size: 7pt !important;
+    line-height: 1.25 !important;
+    color: #000 !important;
   }
 
-  .timeline-review-meta {
-    font-size: 8pt !important;
-  }
-
-  /* Hide map/website links in print */
+  .timeline-review-meta,
   .timeline-review-maps,
-  .timeline-review-website {
+  .timeline-review-website,
+  .timeline-review-alternatives {
     display: none !important;
   }
 
   /* Transport between pubs */
   .timeline-card-transport {
-    font-size: 8pt !important;
+    font-size: 7pt !important;
     background: none !important;
     border: none !important;
-    padding: 4pt 0 !important;
+    padding: 2pt 0 !important;
     text-align: left !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
   }
 
-  /* Page breaks */
+  /* No page break issues */
   .section {
     page-break-before: auto;
   }
 
-  /* Links — show URL */
   a[href]::after {
     content: none !important;
   }

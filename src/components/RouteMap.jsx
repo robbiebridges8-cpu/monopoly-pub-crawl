@@ -44,15 +44,26 @@ export default function RouteMap({ onPubSelect, selectedPub }) {
   useEffect(() => {
     if (mapInstanceRef.current) return
 
+    const isMobile = window.innerWidth <= 768
+
     const map = new maplibregl.Map({
       container: mapRef.current,
       style: 'https://tiles.openfreemap.org/styles/liberty',
       center: [-0.115, 51.51],
       zoom: 12,
       scrollZoom: false,
+      dragRotate: false,
+      touchZoomRotate: true,
+      touchPitch: false,
     })
 
-    map.addControl(new maplibregl.NavigationControl(), 'top-right')
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
+
+    // Enable two-finger touch gestures on mobile
+    if (isMobile) {
+      map.scrollZoom.disable()
+      map.dragPan.enable()
+    }
 
     // Auto-fit bounds to show all pubs
     const bounds = new maplibregl.LngLatBounds()
