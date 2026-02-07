@@ -1640,11 +1640,25 @@
   padding: 6px 14px;
   background: white;
   border-radius: 100px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: var(--shadow-sm);
+}
+
+.timeline-directions-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.timeline-directions-link:hover {
+  color: var(--color-primary-dark, #1a5f2a);
+  text-decoration: underline;
 }
 
 @media (max-width: 968px) {

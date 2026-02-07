@@ -534,4 +534,19 @@ export function getMapsUrl(pub) {
   return `https://www.google.com/maps/search/?api=1&query=${q}`
 }
 
+export function getDirectionsUrl(fromPub, toPub) {
+  const origin = encodeURIComponent(`${fromPub.pubName}, ${fromPub.address}, ${fromPub.postcode}`)
+  const destination = encodeURIComponent(`${toPub.pubName}, ${toPub.address}, ${toPub.postcode}`)
+
+  // Map transport type to Google Maps travel mode
+  let travelMode = 'walking'
+  if (fromPub.transportToNext === 'Cycle') {
+    travelMode = 'bicycling'
+  } else if (fromPub.transportToNext === 'Tube') {
+    travelMode = 'transit'
+  }
+
+  return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&travelmode=${travelMode}`
+}
+
 export default pubs;

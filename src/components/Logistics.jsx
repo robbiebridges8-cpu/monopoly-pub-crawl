@@ -1,4 +1,4 @@
-import pubs, { colorGroups, getMapsUrl } from '../data/pubs'
+import pubs, { colorGroups, getMapsUrl, getDirectionsUrl } from '../data/pubs'
 import PubCard from './PubCard'
 
 export default function Logistics({ onPubSelect }) {
@@ -114,8 +114,9 @@ export default function Logistics({ onPubSelect }) {
           20 mins in each pub is a good benchmark. If you go over in one venue, you'll have to cut down later down the line.
         </p>
         <div className="timeline-cards">
-          {pubs.map((pub) => {
+          {pubs.map((pub, index) => {
             const group = colorGroups[pub.colorGroup]
+            const nextPub = pubs[index + 1]
             return (
               <div key={pub.id} className="timeline-card-item animate-on-scroll">
                 <div className="timeline-card-connector">
@@ -151,9 +152,17 @@ export default function Logistics({ onPubSelect }) {
                       </div>
                     </div>
                   </div>
-                  {pub.transportTime && (
+                  {pub.transportTime && nextPub && (
                     <div className="timeline-card-transport">
-                      {pub.transportToNext} &middot; {pub.transportTime} min to next
+                      <span>{pub.transportToNext} &middot; {pub.transportTime} mins to next</span>
+                      <a
+                        href={getDirectionsUrl(pub, nextPub)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="timeline-directions-link"
+                      >
+                        Get Directions &rarr;
+                      </a>
                     </div>
                   )}
                 </div>
