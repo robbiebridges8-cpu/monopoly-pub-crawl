@@ -20,13 +20,12 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
         <a href="#" className="navbar-logo">
-          <span className="navbar-logo-icon">&#x1F3B2;</span>
-          <span className="navbar-logo-text">Monopoly Pub Crawl</span>
+          <span className="navbar-logo-text">&#x1F3B2; Monopoly Pub Crawl</span>
         </a>
         <ul className={`navbar-links ${mobileOpen ? 'open' : ''}`}>
-          <li><a href="#home" onClick={(e) => handleClick(e, 'home')}>Home</a></li>
+          <li><a href="#overview" onClick={(e) => handleClick(e, 'overview')}>Overview</a></li>
           <li><a href="#route" onClick={(e) => handleClick(e, 'route')}>The Route</a></li>
-          <li><a href="#logistics" onClick={(e) => handleClick(e, 'logistics')}>Logistics</a></li>
+          <li><a href="#logistics" onClick={(e) => handleClick(e, 'logistics')}>The Crawl</a></li>
         </ul>
         <button
           className="navbar-mobile-toggle"

@@ -5,9 +5,9 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-logo">Monopoly Pub Crawl</div>
           <div className="footer-links">
-            <a href="#home" onClick={(e) => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }) }}>Home</a>
-            <a href="#route" onClick={(e) => { e.preventDefault(); document.getElementById('route')?.scrollIntoView({ behavior: 'smooth' }) }}>Route</a>
-            <a href="#logistics" onClick={(e) => { e.preventDefault(); document.getElementById('logistics')?.scrollIntoView({ behavior: 'smooth' }) }}>Logistics</a>
+            <a href="#overview" onClick={(e) => { e.preventDefault(); document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth' }) }}>Overview</a>
+            <a href="#route" onClick={(e) => { e.preventDefault(); document.getElementById('route')?.scrollIntoView({ behavior: 'smooth' }) }}>The Route</a>
+            <a href="#logistics" onClick={(e) => { e.preventDefault(); document.getElementById('logistics')?.scrollIntoView({ behavior: 'smooth' }) }}>The Crawl</a>
           </div>
         </div>
         <hr className="footer-divider" />
