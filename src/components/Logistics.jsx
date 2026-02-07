@@ -89,15 +89,15 @@ export default function Logistics({ onPubSelect }) {
             <div className="logistics-tip">
               <div className="logistics-tip-icon">&#x1F45F;</div>
               <div className="logistics-tip-content">
-                <h4>Wear Comfy Shoes</h4>
-                <p>Most of the route is on foot. Save the fancy footwear for Mayfair and wear trainers.</p>
+                <h4>Wear Comfortable Shoes</h4>
+                <p>Most of the route is on foot. Save the fancy footwear and wear trainers.</p>
               </div>
             </div>
             <div className="logistics-tip">
               <div className="logistics-tip-icon">&#x1F4A7;</div>
               <div className="logistics-tip-content">
                 <h4>Stay Hydrated</h4>
-                <p>Have regular water intervals. Nobody wants to peak at Bow Street and not make the finale.</p>
+                <p>Pace yourself with water breaks. Peaking early and missing the finale is tragic.</p>
               </div>
             </div>
           </div>
