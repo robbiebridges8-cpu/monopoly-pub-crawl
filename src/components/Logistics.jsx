@@ -110,6 +110,9 @@ export default function Logistics({ onPubSelect }) {
             &#x1F5A8; Print Route
           </button>
         </div>
+        <p className="timeline-note animate-on-scroll">
+          20 mins in each pub is a good benchmark. If you go over in one venue, you'll have to cut down later down the line.
+        </p>
         <div className="timeline-cards">
           {pubs.map((pub) => {
             const group = colorGroups[pub.colorGroup]
@@ -145,14 +148,6 @@ export default function Logistics({ onPubSelect }) {
                             </a>
                           )}
                         </div>
-                        {pub.alternatives && pub.alternatives.length > 0 && (
-                          <div className="timeline-review-alternatives">
-                            <span className="timeline-review-alternatives-label">Nearby alternatives:</span>
-                            {pub.alternatives.map((alt, i) => (
-                              <span key={i} className="timeline-review-alt">{alt}</span>
-                            ))}
-                          </div>
-                        )}
                       </div>
                     </div>
                   </div>

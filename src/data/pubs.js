@@ -20,7 +20,6 @@ const pubs = [
     review: "A proper South London pub to kick things off. It opens at 11am, and we usually try and get in and out quickly to bank some breathing room later down the line. Lord Nelson is a common starting place for crawlers, so try and make friends with other groups if you see them there - you'll be seeing a lot of them throughout the day! Make sure you get a photo underneath the Old Kent Road sign. It's quite a distance to the next pub, and we enjoy taking Lime bikes across Tower Bridge while we can still function, but there are buses if this isn't an option.",
     color: "#8B4513",
     colorGroup: "brown",
-    alternatives: ["The Thomas A Becket", "The World Turned Upside Down"]
   },
   {
     id: 2,
@@ -32,7 +31,7 @@ const pubs = [
     lng: -0.0756,
     rating: 7,
     startTime: "11:18",
-    endTime: "11:36",
+    endTime: "11:38",
     transportToNext: "Walk",
     transportTime: 4,
     price: 7.20,
@@ -41,7 +40,6 @@ const pubs = [
     color: "#000000",
     colorGroup: "station",
     website: "https://www.theminoriespub.co.uk",
-    alternatives: ["The Counting House", "The Hung Drawn and Quartered"]
   },
   {
     id: 3,
@@ -52,17 +50,16 @@ const pubs = [
     lat: 51.5138,
     lng: -0.0762,
     rating: 5,
-    startTime: "11:40",
-    endTime: "12:00",
+    startTime: "11:42",
+    endTime: "12:02",
     transportToNext: "Walk",
     transportTime: 9,
     price: 3.70,
     pintQuantity: "1/2",
-    review: "Rounding off the browns brings us to the Hoop and Grapes in Whitechapel. One of the few timber-framed buildings to survive the Great Fire of 1666, The Hoop and Grapes is steeped in history. With a similarly dimly-lit interior to the Minories, you can stand out the front if it's a nice day. If, like us, you are made fun of by locals for drinking halves, try not to feel too emasculated! It's a marathon not a sprint, and you're only on mile 3.",
+    review: "Rounding off the browns brings us to the Hoop and Grapes in Whitechapel. One of the few timber-framed buildings to survive the Great Fire of 1666, The Hoop and Grapes is steeped in history. With a similarly dimly-lit interior to the Minories, you can stand out the front if it's a nice day. If, like us, you are made fun of by locals for drinking halves, try not to feel too ashamed! It's a marathon not a sprint, and you're only on mile 3.",
     color: "#8B4513",
     colorGroup: "brown",
     website: "https://www.nicholsonspubs.co.uk/restaurants/london/thehoopandgrapesaldgatecityoflondon",
-    alternatives: ["The Still & Star", "Williams Ale and Cider House"]
   },
   {
     id: 4,
@@ -73,8 +70,8 @@ const pubs = [
     lat: 51.5179,
     lng: -0.0828,
     rating: 4.5,
-    startTime: "12:09",
-    endTime: "12:35",
+    startTime: "12:11",
+    endTime: "12:31",
     transportToNext: "Tube",
     transportTime: 24,
     price: 6.52,
@@ -83,7 +80,6 @@ const pubs = [
     color: "#000000",
     colorGroup: "station",
     website: "https://www.jdwetherspoon.com/pubs/all-pubs/england/london/hamilton-hall-london",
-    alternatives: ["The Magpie", "Dirty Dicks"]
   },
   {
     id: 5,
@@ -94,8 +90,8 @@ const pubs = [
     lat: 51.5360,
     lng: -0.1050,
     rating: 9,
-    startTime: "12:59",
-    endTime: "13:19",
+    startTime: "12:55",
+    endTime: "13:15",
     transportToNext: "Walk",
     transportTime: 8,
     price: 3.08,
@@ -104,7 +100,6 @@ const pubs = [
     color: "#87CEEB",
     colorGroup: "lightBlue",
     website: "https://www.greeneking-pubs.co.uk/pubs/greater-london/camden-head",
-    alternatives: ["The York", "The Angel"]
   },
   {
     id: 6,
@@ -115,8 +110,8 @@ const pubs = [
     lat: 51.5318,
     lng: -0.1130,
     rating: 9.5,
-    startTime: "13:27",
-    endTime: "13:48",
+    startTime: "13:23",
+    endTime: "13:43",
     transportToNext: "Walk",
     transportTime: 15,
     price: 3.85,
@@ -125,7 +120,6 @@ const pubs = [
     color: "#87CEEB",
     colorGroup: "lightBlue",
     website: "https://www.thecastleislington.co.uk",
-    alternatives: ["The Lexington", "The Chapel Bar"]
   },
   {
     id: 7,
@@ -136,8 +130,8 @@ const pubs = [
     lat: 51.5320,
     lng: -0.1240,
     rating: 6.5,
-    startTime: "14:03",
-    endTime: "14:36",
+    startTime: "13:58",
+    endTime: "14:18",
     transportToNext: "Walk",
     transportTime: 11,
     price: 7.05,
@@ -146,7 +140,6 @@ const pubs = [
     color: "#000000",
     colorGroup: "station",
     website: "https://www.parcelyard.co.uk",
-    alternatives: ["The Queen's Head", "The Betjeman Arms"]
   },
   {
     id: 8,
@@ -157,17 +150,16 @@ const pubs = [
     lat: 51.5282,
     lng: -0.1337,
     rating: 8,
-    startTime: "14:47",
-    endTime: "15:25",
+    startTime: "14:29",
+    endTime: "14:49",
     transportToNext: "Walk",
     transportTime: 18,
     price: 3.25,
     pintQuantity: "1/2",
-    review: "The light blues aren't the most coveted set on the standard Monopoly board, but they're comfortably our favourie colour on the crawl. Housed in a stunning neo-classical stone lodge at the front of Euston station, The Euston Tap is a craft beer paradise. Over 30 keg lines and a huge bottle selection crammed into a nicely compact space. One of London's finest beer bars to cap off the elite light blues - don't rush this one.",
+    review: "The light blues aren't the most coveted set on the standard Monopoly board, but they're comfortably our favourite colour on the crawl. Housed in a stunning neo-classical stone lodge at the front of Euston station, The Euston Tap is a craft beer paradise. Over 30 keg lines and a huge bottle selection crammed into a nicely compact space. One of London's finest beer bars to cap off the elite light blues - don't rush this one.",
     color: "#87CEEB",
     colorGroup: "lightBlue",
     website: "https://www.eustontap.com",
-    alternatives: ["The Doric Arch", "The Euston Flyer"]
   },
   {
     id: 9,
@@ -178,17 +170,16 @@ const pubs = [
     lat: 51.5210,
     lng: -0.1520,
     rating: 7,
-    startTime: "15:43",
-    endTime: "15:53",
+    startTime: "15:07",
+    endTime: "15:27",
     transportToNext: "Walk",
     transportTime: 18,
     price: 7.20,
     pintQuantity: "1",
-    review: "At the end of the longest walk on the crawl, you'll arrive at a stylish gastropub on one of London's most charming high streets. The Marylebone, the fourth and final station on the crawl, is a modestly sized venue that is often full inside, but there is plenty of room to stand on the street outside and enjoy a drink, immersing yourself in the buzz of the high street. The village-like feel of Marylebone is a welcome change of pace. Hunger usually begins setting in as a result of the walking between pubs - it's a good time to pick up some food on the way to the next pub.",
+    review: "At the end of the longest walk on the crawl, you'll arrive at a stylish gastropub on one of London's most charming high streets. The Marylebone, the fourth and final station on the crawl, is a modestly sized venue that is often full inside, but there is plenty of room to stand on the street outside and enjoy a drink, immersing yourself in the buzz of the high street. The village-like feel of Marylebone is a welcome change of pace. Hunger usually begins setting in as a result of the walking between pubs - it's a good time to pick up some food on the way to the next one.",
     color: "#000000",
     colorGroup: "station",
     website: "https://www.themarylebone.co.uk",
-    alternatives: ["The Golden Eagle", "The Barley Mow"]
   },
   {
     id: 10,
@@ -199,8 +190,8 @@ const pubs = [
     lat: 51.5098,
     lng: -0.1520,
     rating: 7,
-    startTime: "16:11",
-    endTime: "16:30",
+    startTime: "15:45",
+    endTime: "16:05",
     transportToNext: "Walk",
     transportTime: 9,
     price: 4.50,
@@ -209,7 +200,6 @@ const pubs = [
     color: "#00008B",
     colorGroup: "darkBlue",
     website: "https://the-audley.com",
-    alternatives: ["The Punchbowl", "The Running Horse"]
   },
   {
     id: 11,
@@ -220,8 +210,8 @@ const pubs = [
     lat: 51.5105,
     lng: -0.1395,
     rating: 8,
-    startTime: "16:39",
-    endTime: "16:59",
+    startTime: "16:14",
+    endTime: "16:34",
     transportToNext: "Walk",
     transportTime: 12,
     price: 3.75,
@@ -230,7 +220,6 @@ const pubs = [
     color: "#00008B",
     colorGroup: "darkBlue",
     website: "https://www.burlingtonarms.com",
-    alternatives: ["The Coach Makers Arms", "The Windmill"]
   },
   {
     id: 12,
@@ -241,8 +230,8 @@ const pubs = [
     lat: 51.5112,
     lng: -0.1340,
     rating: 6,
-    startTime: "17:11",
-    endTime: "17:31",
+    startTime: "16:46",
+    endTime: "17:06",
     transportToNext: "Walk",
     transportTime: 7,
     price: 4.05,
@@ -251,7 +240,6 @@ const pubs = [
     color: "#FFD700",
     colorGroup: "yellow",
     website: "https://www.nicholsonspubs.co.uk/restaurants/london/thestjamestavernwestminster",
-    alternatives: ["The Lyric", "De Hems"]
   },
   {
     id: 13,
@@ -262,17 +250,16 @@ const pubs = [
     lat: 51.5068,
     lng: -0.1379,
     rating: 6,
-    startTime: "17:38",
-    endTime: "17:58",
+    startTime: "17:13",
+    endTime: "17:33",
     transportToNext: "Walk",
     transportTime: 11,
     price: 3.70,
     pintQuantity: "1/2",
-    review: "Hidden down a narrow alley off Pall Mall, The Red Lion dates back to 1821 and oozes old-world charm. Walking in here feels like you've discovered a secret London, and is a welcome contrast from the hustle and bustle of Piccadilly. Once you've completed this stop, you are officially halfway through the crawl - a nice milestone, but the second half is what separates the boys from the men (or the girls from the women).",
+    review: "Hidden down a narrow alley off Pall Mall, The Red Lion dates back to 1821 and oozes old-world charm. Walking in here feels like you've discovered a secret London, and is a welcome contrast from the hustle and bustle of Piccadilly. Once you've completed this stop, you are officially halfway through the crawl - a nice milestone, but the second half is what separates success from failure.",
     color: "#FF69B4",
     colorGroup: "pink",
     website: "https://www.redlionwestminster.co.uk",
-    alternatives: ["The Golden Lion", "The ICA Bar"]
   },
   {
     id: 14,
@@ -283,8 +270,8 @@ const pubs = [
     lat: 51.5065,
     lng: -0.1254,
     rating: 5.5,
-    startTime: "18:09",
-    endTime: "18:29",
+    startTime: "17:44",
+    endTime: "18:04",
     transportToNext: "Walk",
     transportTime: 1,
     price: 2.85,
@@ -293,7 +280,6 @@ const pubs = [
     color: "#FF69B4",
     colorGroup: "pink",
     website: "https://www.greeneking.co.uk/pubs/greater-london/silver-cross",
-    alternatives: ["The Clarence", "Lord Moon of the Mall"]
   },
   {
     id: 15,
@@ -304,8 +290,8 @@ const pubs = [
     lat: 51.5076,
     lng: -0.1235,
     rating: 6,
-    startTime: "18:30",
-    endTime: "18:48",
+    startTime: "18:05",
+    endTime: "18:25",
     transportToNext: "Walk",
     transportTime: 20,
     price: 3.80,
@@ -313,7 +299,6 @@ const pubs = [
     review: "London's only pub split across both sides of an alley. The Ship & Shovell, named after Admiral Sir Cloudesley Shovell, is two separate bars connected by name but divided by Craven Passage. This is a lively stop, with people congregating all the way up the alley. From here, embark on the last of the bigger walks of the day, taking around 17 minutes to arrive at Fleet Street.",
     colorGroup: "pink",
     website: "https://www.shipandshovell.co.uk",
-    alternatives: ["The Sherlock Holmes", "The Harp"]
   },
   {
     id: 16,
@@ -324,8 +309,8 @@ const pubs = [
     lat: 51.5141,
     lng: -0.1081,
     rating: 5,
-    startTime: "19:08",
-    endTime: "19:28",
+    startTime: "18:45",
+    endTime: "19:05",
     transportToNext: "Walk",
     transportTime: 10,
     price: 3.60,
@@ -333,7 +318,6 @@ const pubs = [
     review: "Rebuilt in 1667 after the Great Fire, Ye Olde Cheshire Cheese is one of London's most historic pubs. Samuel Johnson, Charles Dickens and Mark Twain all drank here. The warren of dark rooms connected by narrow staircases is enchanting. A crown jewel of the crawl, and arguably the most historically significant - do not skip this one.",
     color: "#FF0000",
     colorGroup: "red",
-    alternatives: ["The Old Bank of England", "Ye Olde Cock Tavern"]
   },
   {
     id: 17,
@@ -344,8 +328,8 @@ const pubs = [
     lat: 51.5107,
     lng: -0.1195,
     rating: 6,
-    startTime: "19:38",
-    endTime: "20:03",
+    startTime: "19:15",
+    endTime: "19:35",
     transportToNext: "Walk",
     transportTime: 3,
     price: 4.05,
@@ -354,7 +338,6 @@ const pubs = [
     color: "#FF0000",
     colorGroup: "red",
     website: "https://www.thewellingtonpub.com",
-    alternatives: ["The George", "The Coal Hole"]
   },
   {
     id: 18,
@@ -365,8 +348,8 @@ const pubs = [
     lat: 51.5130,
     lng: -0.1222,
     rating: 8.5,
-    startTime: "20:06",
-    endTime: "20:26",
+    startTime: "19:38",
+    endTime: "19:58",
     transportToNext: "Walk",
     transportTime: 9,
     price: 3.85,
@@ -375,7 +358,6 @@ const pubs = [
     color: "#FF4500",
     colorGroup: "orange",
     website: "https://www.themarquessofanglesey.co.uk",
-    alternatives: ["The Lamb and Flag", "The Nag's Head"]
   },
   {
     id: 19,
@@ -386,8 +368,8 @@ const pubs = [
     lat: 51.5080,
     lng: -0.1270,
     rating: 7,
-    startTime: "20:35",
-    endTime: "20:55",
+    startTime: "20:07",
+    endTime: "20:27",
     transportToNext: "Walk",
     transportTime: 5,
     price: 4.10,
@@ -396,7 +378,6 @@ const pubs = [
     color: "#FF0000",
     colorGroup: "red",
     website: "https://www.admiraltytrafalgar.co.uk",
-    alternatives: ["The Chandos", "The Portrait"]
   },
   {
     id: 20,
@@ -407,8 +388,8 @@ const pubs = [
     lat: 51.5113,
     lng: -0.1302,
     rating: 5,
-    startTime: "21:00",
-    endTime: "21:20",
+    startTime: "20:32",
+    endTime: "20:52",
     transportToNext: "Walk",
     transportTime: 3,
     price: 3.50,
@@ -417,7 +398,6 @@ const pubs = [
     color: "#FFD700",
     colorGroup: "yellow",
     website: "https://www.jdwetherspoon.com/pubs/all-pubs/england/london/the-moon-under-water-leicester-square",
-    alternatives: ["The Porcupine", "All Bar One Leicester Square"]
   },
   {
     id: 21,
@@ -428,8 +408,8 @@ const pubs = [
     lat: 51.5095,
     lng: -0.1310,
     rating: 6.5,
-    startTime: "21:23",
-    endTime: "21:36",
+    startTime: "20:55",
+    endTime: "21:15",
     transportToNext: "Walk",
     transportTime: 7,
     price: 3.90,
@@ -437,7 +417,6 @@ const pubs = [
     review: "For some reason, the later in the crawl we get, the more we start opting for full pints instead of halves. This begins around the time of The Coach House, which is a cosy pub tucked just off Coventry Street in the heart of theatreland. The Coach House is a welcome escape from the West End crowds, with comfortable seating and a decent drinks selection. Feels like the beginning of the home stretch - 5 to go.",
     color: "#FFD700",
     colorGroup: "yellow",
-    alternatives: ["The Comedy", "The Piccadilly Institute"]
   },
   {
     id: 22,
@@ -448,8 +427,8 @@ const pubs = [
     lat: 51.5125,
     lng: -0.1395,
     rating: 6,
-    startTime: "21:43",
-    endTime: "22:03",
+    startTime: "21:22",
+    endTime: "21:42",
     transportToNext: "Walk",
     transportTime: 2,
     price: 3.80,
@@ -457,7 +436,6 @@ const pubs = [
     review: "Named in honour of David Bowie, whose Ziggy Stardust album cover was shot on this very street, The Starman is a stylish modern bar just off Regent Street. Check out the Bowie mural around the corner before heading in.",
     color: "#228B22",
     colorGroup: "green",
-    alternatives: ["Vasco and Piero's Pavilion", "The Clachan"]
   },
   {
     id: 23,
@@ -468,8 +446,8 @@ const pubs = [
     lat: 51.5108,
     lng: -0.1360,
     rating: 6.5,
-    startTime: "22:05",
-    endTime: "22:25",
+    startTime: "21:44",
+    endTime: "22:04",
     transportToNext: "Walk",
     transportTime: 5,
     price: 3.80,
@@ -477,7 +455,6 @@ const pubs = [
     review: "Although Vine Street doesn't exist anymore, Leicester Arms is a traditional pub on Glasshouse Street near where Vine Street once ran. It has a lot of character and a warm, old-school pub atmosphere. Remember to maintain regular water intervals - could be the difference between success and failure at this stage.",
     color: "#FF4500",
     colorGroup: "orange",
-    alternatives: ["The Blue Posts", "Rupert Street Bar"]
   },
   {
     id: 24,
@@ -488,8 +465,8 @@ const pubs = [
     lat: 51.5140,
     lng: -0.1385,
     rating: 7,
-    startTime: "22:30",
-    endTime: "22:50",
+    startTime: "22:09",
+    endTime: "22:29",
     transportToNext: "Walk",
     transportTime: 6,
     price: 3.32,
@@ -498,7 +475,6 @@ const pubs = [
     color: "#FF4500",
     colorGroup: "orange",
     website: "https://www.greeneking-pubs.co.uk/pubs/greater-london/shakespeares-head",
-    alternatives: ["The Crown", "The John Snow"]
   },
   {
     id: 25,
@@ -509,8 +485,8 @@ const pubs = [
     lat: 51.5140,
     lng: -0.1460,
     rating: 6,
-    startTime: "22:56",
-    endTime: "23:16",
+    startTime: "22:35",
+    endTime: "22:55",
     transportToNext: "Walk",
     transportTime: 2,
     price: 3.80,
@@ -518,7 +494,6 @@ const pubs = [
     review: "A charming little pub tucked away on a quiet street just off Bond Street. The Duke of York punches above its weight with a cosy, traditional interior. Definitely feels like a hidden gem. This is where the strict timings throughout the day pay dividends. If you've been careless, however, you'll be racing against the clock in order to finish the crawl.",
     color: "#228B22",
     colorGroup: "green",
-    alternatives: ["The Clarendon", "The Iron Duke"]
   },
   {
     id: 26,
@@ -529,8 +504,8 @@ const pubs = [
     lat: 51.5148,
     lng: -0.1505,
     rating: 6,
-    startTime: "23:18",
-    endTime: "23:38",
+    startTime: "22:57",
+    endTime: "23:17",
     transportToNext: "N/A",
     transportTime: null,
     price: 7.35,
@@ -538,7 +513,6 @@ const pubs = [
     review: "The grand finale. The Duchess is a sleek, modern venue just off Oxford Street - the perfect spot to celebrate the end of the epic Monopoly pub crawl. It closes at midnight, so you should be able to savour your conquest here. It is then up to you whether to celebrate the achievement and continue the night in one of Soho's many bars or clubs - I can say that we certainly haven't had the urge to carry on after completing the board. If you've made it to the end, you are part of the MonopElite - congratulations!",
     color: "#228B22",
     colorGroup: "green",
-    alternatives: ["The Argyll Arms", "The Champion"]
   }
 ];
 
