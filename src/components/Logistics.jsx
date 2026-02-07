@@ -125,6 +125,11 @@ export default function Logistics({ onPubSelect }) {
                     </div>
                     <div className="timeline-card-review">
                       <div className="timeline-review-box">
+                        <div className="timeline-review-header-print">
+                          <span className="timeline-review-property">{pub.property}</span>
+                          <span className="timeline-review-pubname">{pub.pubName}</span>
+                          <span className="timeline-review-times">{pub.startTime} - {pub.endTime}</span>
+                        </div>
                         <h4 className="timeline-review-title">The Verdict</h4>
                         <p className="timeline-review-text">{pub.review}</p>
                         <div className="timeline-review-meta">
