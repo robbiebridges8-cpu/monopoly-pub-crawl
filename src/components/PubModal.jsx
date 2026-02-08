@@ -35,12 +35,6 @@ export default function PubModal({ pub, onClose }) {
           <div className="modal-deed-address">{pub.address}, {pub.postcode}</div>
         </div>
 
-        {pub.image && (
-          <div className="modal-deed-image">
-            <img src={pub.image} alt={pub.pubName} />
-          </div>
-        )}
-
         <div className="modal-deed-divider" />
 
         <div className="modal-body">

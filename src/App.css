@@ -946,19 +946,6 @@
   color: #444;
 }
 
-/* Deed image */
-.modal-deed-image {
-  padding: 16px 24px;
-  text-align: center;
-}
-
-.modal-deed-image img {
-  max-width: 100%;
-  max-height: 200px;
-  border-radius: 6px;
-  object-fit: contain;
-}
-
 /* Deed divider */
 .modal-deed-divider {
   height: 1px;
