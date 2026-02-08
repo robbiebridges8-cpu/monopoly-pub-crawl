@@ -1,5 +1,45 @@
+import { useState } from 'react'
 import pubs, { colorGroups, getMapsUrl, getDirectionsUrl } from '../data/pubs'
 import PubCard from './PubCard'
+
+function MobileFlipCard({ pub, group }) {
+  const [flipped, setFlipped] = useState(false)
+  const lightBands = ['yellow', 'lightBlue']
+  const bandTextColor = lightBands.includes(pub.colorGroup) ? '#1a1a1a' : '#fff'
+
+  return (
+    <div
+      className={`mobile-flip-card ${flipped ? 'flipped' : ''}`}
+      onClick={() => setFlipped(!flipped)}
+    >
+      <div className="mobile-flip-inner">
+        <div className="mobile-flip-front">
+          <PubCard pub={pub} onClick={(e) => e.stopPropagation()} />
+        </div>
+        <div className="mobile-flip-back">
+          <div className="mobile-flip-back-band" style={{ background: group.color }}>
+            <span style={{ color: bandTextColor }}>{pub.property}</span>
+          </div>
+          <div className="mobile-flip-back-body">
+            <div className="mobile-flip-back-pubname">{pub.pubName.toUpperCase()}</div>
+            <div className="mobile-flip-back-rule" />
+            <p className="mobile-flip-back-text">{pub.review}</p>
+            <div className="mobile-flip-back-meta">
+              <a href={getMapsUrl(pub)} target="_blank" rel="noopener noreferrer" className="mobile-flip-back-maps" onClick={(e) => e.stopPropagation()}>
+                Open in Maps
+              </a>
+              {pub.website && (
+                <a href={pub.website} target="_blank" rel="noopener noreferrer" className="mobile-flip-back-website" onClick={(e) => e.stopPropagation()}>
+                  Website &rarr;
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function Logistics({ onPubSelect }) {
   const totalSpent = pubs.reduce((sum, p) => sum + (p.price || 0), 0)
@@ -113,7 +153,12 @@ export default function Logistics({ onPubSelect }) {
         <p className="timeline-note animate-on-scroll">
           20 mins in each pub is a good benchmark. If you go over in one venue, you'll have to cut down later down the line.
         </p>
-        <div className="timeline-cards">
+        <p className="timeline-instruction-mobile animate-on-scroll">
+          Tap any card to see our verdict.
+        </p>
+
+        {/* Desktop: Original timeline with side-by-side layout */}
+        <div className="timeline-cards timeline-desktop">
           {pubs.map((pub, index) => {
             const group = colorGroups[pub.colorGroup]
             const nextPub = pubs[index + 1]
@@ -137,9 +182,6 @@ export default function Logistics({ onPubSelect }) {
                         <h4 className="timeline-review-title">The Verdict</h4>
                         <p className="timeline-review-text">{pub.review}</p>
                         <div className="timeline-review-meta">
-                          {pub.pintQuantity === '0' && (
-                            <span className="timeline-review-skipped">SKIPPED</span>
-                          )}
                           <a href={getMapsUrl(pub)} target="_blank" rel="noopener noreferrer" className="timeline-review-maps">
                             Open in Maps
                           </a>
@@ -162,6 +204,37 @@ export default function Logistics({ onPubSelect }) {
                         className="timeline-directions-link"
                       >
                         Get Directions &rarr;
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Mobile: Flippable cards */}
+        <div className="timeline-cards timeline-mobile">
+          {pubs.map((pub, index) => {
+            const group = colorGroups[pub.colorGroup]
+            const nextPub = pubs[index + 1]
+            return (
+              <div key={pub.id} className="timeline-card-item animate-on-scroll">
+                <div className="timeline-card-connector">
+                  <div className="timeline-card-dot" style={{ background: group.color }} />
+                </div>
+                <div className="timeline-card-content">
+                  <MobileFlipCard pub={pub} group={group} />
+                  {pub.transportTime && nextPub && (
+                    <div className="timeline-card-transport">
+                      <span>{pub.transportToNext} &middot; {pub.transportTime} mins</span>
+                      <a
+                        href={getDirectionsUrl(pub, nextPub)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="timeline-directions-link"
+                      >
+                        Directions &rarr;
                       </a>
                     </div>
                   )}

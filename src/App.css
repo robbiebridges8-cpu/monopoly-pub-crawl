@@ -726,34 +726,22 @@
 
 
 /* ===== PROPERTY CARD (physical Monopoly deed) ===== */
-/* Real card: 57 × 89 mm PORTRAIT. Fixed pixel dims as single source of truth. */
 :root {
   --card-w: 215px;
-  --card-h: 290px;
 }
 
 .property-card {
   width: var(--card-w);
-  height: var(--card-h);
+  aspect-ratio: 3 / 4.5;
   background: #FFFFFF;
   border: 2px solid #000;
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
   flex: 0 0 auto;
   align-self: start;
-}
-
-/* Scale down uniformly on small screens — no reflow, no squash */
-@media (max-width: 480px) {
-  .property-card {
-    transform: scale(0.85);
-    transform-origin: top left;
-    margin-right: calc(var(--card-w) * -0.15);
-    margin-bottom: calc(var(--card-h) * -0.15);
-  }
 }
 
 .property-card__band {
@@ -772,11 +760,12 @@
 }
 
 .property-card__body {
-  padding: 16px 18px 18px;
+  padding: 16px 18px 14px;
   text-align: center;
-  display: grid;
-  grid-template-rows: auto auto auto 1fr;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
 }
 
 .property-card__pub-name {
@@ -792,53 +781,86 @@
 .property-card__address {
   font-size: 10px;
   color: #444;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   line-height: 1.3;
 }
 
 .property-card__rule {
   height: 1px;
   background: #000;
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 
-.property-card__info {
-  text-align: left;
-}
-
-.property-card__row {
-  display: flex;
-  align-items: baseline;
-  gap: 3px;
-  font-size: 12px;
-  color: #000;
-  padding: 6px 0;
-  line-height: 1.3;
-}
-
-.property-card__row > span:first-child {
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.property-card__row > span:last-child {
-  white-space: nowrap;
-  flex-shrink: 0;
-  font-weight: 700;
-}
-
-.property-card__dots {
+.property-card__image {
+  width: 100%;
   flex: 1;
-  border-bottom: 1px dotted #999;
-  margin: 0 2px;
-  min-width: 8px;
-  align-self: baseline;
-  position: relative;
-  top: -3px;
+  min-height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
-.property-card__row--bold {
+.property-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-card__image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.property-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.property-card__times {
+  font-size: 11px;
   font-weight: 700;
+  color: #000;
+}
+
+.property-card__progress {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.property-card__progress-num {
+  font-size: 14px;
+  font-weight: 900;
+  color: #000;
+}
+
+.property-card__progress-total {
+  color: #888;
+}
+
+.property-card__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.property-card__links a {
+  font-size: 10px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.property-card__links a:hover {
+  text-decoration: underline;
 }
 
 /* ===== PUB MODAL (Monopoly deed style) ===== */
@@ -922,6 +944,19 @@
 .modal-deed-address {
   font-size: 0.8rem;
   color: #444;
+}
+
+/* Deed image */
+.modal-deed-image {
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.modal-deed-image img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 6px;
+  object-fit: contain;
 }
 
 /* Deed divider */
@@ -1452,6 +1487,220 @@
   transform: scale(0.97);
 }
 
+.timeline-instruction-mobile {
+  display: none;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  font-style: italic;
+  background: #f0f7ff;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid #d0e3ff;
+}
+
+.map-instruction {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  margin-top: -8px;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+/* Desktop timeline - visible by default */
+.timeline-desktop {
+  display: block;
+}
+
+/* Mobile timeline - hidden by default */
+.timeline-mobile {
+  display: none;
+}
+
+/* Mobile Flip Card Styles */
+.mobile-flip-card {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 3 / 4.5;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.mobile-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.mobile-flip-card.flipped .mobile-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.mobile-flip-front,
+.mobile-flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.mobile-flip-front {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-flip-front .property-card {
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+.mobile-flip-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 6px;
+}
+
+.mobile-flip-back-band {
+  padding: 14px 14px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #000;
+}
+
+.mobile-flip-back-body {
+  flex: 1;
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+}
+
+.mobile-flip-back-pubname {
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+  color: #000;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.mobile-flip-back-rule {
+  height: 1px;
+  background: #000;
+  margin: 0 0 16px;
+}
+
+.mobile-flip-back-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000;
+  flex: 1;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.mobile-flip-back-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.mobile-flip-back-maps {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mobile-flip-back-website {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mobile-flip-back-meta a:hover {
+  text-decoration: underline;
+}
+
+/* Show mobile layout on small screens */
+@media (max-width: 768px) {
+  .timeline-instruction-mobile {
+    display: block;
+  }
+
+  .timeline-desktop {
+    display: none;
+  }
+
+  .timeline-mobile {
+    display: block;
+  }
+
+  .timeline-mobile .timeline-cards {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .timeline-mobile .timeline-cards::before {
+    display: none;
+  }
+
+  .timeline-mobile .timeline-card-connector {
+    display: none;
+  }
+
+  .timeline-mobile .timeline-card-item {
+    margin-bottom: 24px;
+  }
+
+  .timeline-mobile .timeline-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile-flip-card {
+    width: 100%;
+  }
+
+  .mobile-flip-front .property-card {
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  .timeline-mobile .timeline-card-transport {
+    margin-top: 16px;
+    left: auto;
+    transform: none;
+    position: static;
+  }
+}
+
+/* Original timeline styles */
 .timeline-cards {
   position: relative;
   max-width: 920px;
@@ -1565,27 +1814,27 @@
 .timeline-review-maps {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #1A237E;
+  color: #2563eb;
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .timeline-review-maps:hover {
-  color: #D32F2F;
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
 .timeline-review-website {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #1A237E;
+  color: #2563eb;
   text-decoration: none;
   margin-left: auto;
   transition: color 0.2s;
 }
 
 .timeline-review-website:hover {
-  color: #D32F2F;
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
@@ -1636,14 +1885,14 @@
 }
 
 .timeline-directions-link {
-  color: var(--color-primary);
+  color: #2563eb;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.15s;
 }
 
 .timeline-directions-link:hover {
-  color: var(--color-primary-dark, #1a5f2a);
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
@@ -1782,8 +2031,15 @@
   .logistics-tips,
   .section-title,
   .section-subtitle,
-  .timeline-directions-link {
+  .timeline-directions-link,
+  .timeline-instruction-mobile,
+  .map-instruction,
+  .timeline-mobile {
     display: none !important;
+  }
+
+  .timeline-desktop {
+    display: block !important;
   }
 
   /* Reset animations */
@@ -1815,7 +2071,7 @@
     color: #000 !important;
   }
 
-  /* Timeline cards */
+  /* Timeline cards for print */
   .timeline-cards {
     max-width: 100% !important;
     padding-left: 0 !important;
@@ -1902,8 +2158,7 @@
 
   .timeline-review-meta,
   .timeline-review-maps,
-  .timeline-review-website,
-  .timeline-review-alternatives {
+  .timeline-review-website {
     display: none !important;
   }
 
