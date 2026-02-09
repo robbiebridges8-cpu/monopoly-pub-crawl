@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
 
         <p className="hero-description">
-          Complete the legendary Monopoly board, pint by pint.
+          Complete the legendary Monopoly board, drink by drink.
         </p>
 
         <div className="hero-stats">
