@@ -181,16 +181,6 @@ export default function Logistics({ onPubSelect }) {
                         </div>
                         <h4 className="timeline-review-title">The Verdict</h4>
                         <p className="timeline-review-text">{pub.review}</p>
-                        <div className="timeline-review-meta">
-                          <a href={getMapsUrl(pub)} target="_blank" rel="noopener noreferrer" className="timeline-review-maps">
-                            Open in Maps
-                          </a>
-                          {pub.website && (
-                            <a href={pub.website} target="_blank" rel="noopener noreferrer" className="timeline-review-website">
-                              Visit website &rarr;
-                            </a>
-                          )}
-                        </div>
                       </div>
                     </div>
                   </div>
